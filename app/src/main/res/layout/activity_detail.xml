@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?><androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".DetailActivity">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/rl_detail1">
+
+            <!--Back Drop Image Movie-->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="500px"
+                android:id="@+id/iv_backDrop"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/sampul_noimage"
+                android:scaleType="fitXY"/>
+
+
+
+            <!--Poster Image Movie-->
+            <ImageView
+                android:layout_width="500px"
+                android:layout_height="800px"
+                android:id="@+id/iv_detailImage"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/dp_noimage"/>
+
+
+            <!--Rating Star Movie-->
+            <RatingBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rb_rating"
+                style="?android:attr/ratingBarStyleIndicator"
+                android:layout_below="@id/tv_detailTitle"
+                android:layout_centerHorizontal="true"
+                android:numStars="5"
+                android:stepSize="0.1"
+                android:isIndicator="true"/>
+
+            <!--Title Movie-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_detailTitle"
+                android:layout_marginLeft="30px"
+                android:layout_marginRight="30px"
+                android:layout_centerHorizontal="true"
+                android:text="Ini Judul"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:layout_below="@id/iv_detailImage"/>
+
+            <!--Genre Movie-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_detailGenre"
+                android:layout_marginTop="20px"
+                android:layout_marginLeft="30px"
+                android:layout_marginRight="30px"
+                android:layout_marginBottom="20px"
+                android:layout_centerHorizontal="true"
+                android:textSize="15dp"
+                android:textStyle="normal"
+                android:textAlignment="center"
+                android:layout_below="@id/rb_rating"/>
+                <!--android:textStyle="italic"!-->
+
+
+
+            <!--Release Date Movie-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_detailYear"
+                android:layout_marginTop="20px"
+                android:layout_marginLeft="30px"
+                android:layout_marginRight="30px"
+                android:layout_marginBottom="20px"
+                android:layout_centerHorizontal="true"
+                android:textSize="15dp"
+                android:textAlignment="center"
+                android:layout_below="@id/tv_detailGenre"/>
+
+            <!--Overview Text-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_overview"
+                android:layout_marginBottom="20px"
+                android:layout_below="@+id/tv_detailYear"
+                android:text="Overview :"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                android:layout_centerHorizontal="true" />
+
+            <!--Overview Movie-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_detailOverview"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20px"
+                android:layout_centerHorizontal="true"
+                android:textSize="17dp"
+                android:layout_below="@id/tv_overview"
+                android:justificationMode="inter_word"/>
+
+            <!--Credits Text-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_credits"
+                android:layout_marginBottom="20px"
+                android:layout_below="@+id/tv_detailOverview"
+                android:text="Credits :"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                android:layout_centerHorizontal="true" />
+
+            <!--Cast Credit Movie-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_detailCreditsCast"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20px"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/tv_credits"
+                android:textSize="17dp"
+                android:justificationMode="inter_word"/>
+
+            <!--Cast Crew Movie-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_detailCreditsCrew"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20px"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/tv_detailCreditsCast"
+                android:textSize="17dp"
+                android:justificationMode="inter_word"/>
+
+            <!--Trailer Text-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_trailer"
+                android:layout_marginBottom="20px"
+                android:layout_below="@+id/tv_detailCreditsCrew"
+                android:text="Trailer :"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                android:layout_centerHorizontal="true"/>
+
+            <!--Trailer Movie-->
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/b_detailTrailler"
+                android:text="Watch Trailer"
+                android:layout_below="@+id/tv_trailer"
+                android:layout_centerHorizontal="true"
+                android:drawableLeft="@drawable/ic_baseline_local_movies"
+                android:layout_marginBottom="15dp"/>
+
+        </RelativeLayout>
+
+        <ProgressBar
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:id="@+id/pb_loadingDetail"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+</androidx.core.widget.NestedScrollView>
+
